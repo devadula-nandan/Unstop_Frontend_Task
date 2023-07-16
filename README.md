@@ -1,5 +1,5 @@
 # Getting Started with Create React App
-This is a task given at Unstop, for a Frontend developer role
+This is a task given at Unstop, for a Frontend developer role.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
