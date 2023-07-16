@@ -46,8 +46,8 @@ function OverviewMobile({ show }) {
                         </div>
                         <div className="py-3 px-4 border-r flex-auto border-b w-full">
                             <h4 className='text-[#1C4980] text-[0.875rem] font-semibold mb-3'>Candidates</h4>
-                            <div className="flex">
-                                <div className="border-r pr-3 flex gap-3 items-center">
+                            <div className="flex flex-wrap gap-y-2">
+                                <div className=" pr-3 flex gap-3 items-center">
                                     <div className=''>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                                             <rect width="40" height="40" rx="8" fill="#EBE8FD" />
@@ -74,8 +74,8 @@ function OverviewMobile({ show }) {
                         </div>
                         <div className="py-3 px-4 border-r flex-auto w-full">
                             <h4 className='text-[#1C4980] text-[0.875rem] font-semibold mb-3'>Candidates Source</h4>
-                            <div className="flex">
-                                <div className="border-r pr-3 flex gap-2 items-center">
+                            <div className="flex flex-wrap gap-y-2">
+                                <div className=" pr-3 flex gap-2 items-center">
                                     <div className=''>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                                             <rect width="40" height="40" rx="8" fill="#FCE8EF" />
@@ -98,7 +98,7 @@ function OverviewMobile({ show }) {
                                         <p className=' text-xs font-medium text-[#1C4980]'>Social Share</p>
                                     </div>
                                 </div>
-                                <div className="border-l pl-3 flex gap-3 items-center">
+                                <div className="pl-3 flex gap-3 items-center">
                                     <div className="flex flex-col">
                                         <h4 className=' font-semibold text-base text-[#1C4980] flex items-center gap-1'>145 <span className='text-[#05C165] text-xs'>+89</span></h4>
                                         <p className=' text-xs font-medium text-[#1C4980]'>Unique Link</p>
