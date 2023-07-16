@@ -23,7 +23,7 @@ function OverviewMobile({ show }) {
                                             </defs>
                                         </svg>
                                     </div>
-                                    <h4 className=' font-semibold text-lg text-[#1C4980]'>34</h4>
+                                    <h4 className=' font-semibold text-base text-[#1C4980]'>34</h4>
                                 </div>
                             </div>
                             <div className="py-3 px-4 w-1/2">
@@ -40,7 +40,7 @@ function OverviewMobile({ show }) {
                                             </g>
                                         </svg>
                                     </div>
-                                    <h4 className=' font-semibold text-lg text-[#1C4980]'>11</h4>
+                                    <h4 className=' font-semibold text-base text-[#1C4980]'>11</h4>
                                 </div>
                             </div>
                         </div>
@@ -60,13 +60,13 @@ function OverviewMobile({ show }) {
                                         </svg>
                                     </div>
                                     <div className="flex flex-col">
-                                        <h4 className=' font-semibold text-lg text-[#1C4980] flex items-center gap-1'>11,145 <span className='text-[#05C165] text-xs'>+89</span></h4>
+                                        <h4 className=' font-semibold text-base text-[#1C4980] flex items-center gap-1'>11,145 <span className='text-[#05C165] text-xs'>+89</span></h4>
                                         <p className=' text-xs font-medium text-[#1C4980]'>Total Candidate</p>
                                     </div>
                                 </div>
                                 <div className="border-l pl-4 flex gap-3 items-center">
                                     <div className="flex flex-col">
-                                        <h4 className=' font-semibold text-lg text-[#1C4980] flex items-center gap-1'>1,14 <span className='text-[#05C165] text-xs'>+89</span></h4>
+                                        <h4 className=' font-semibold text-base text-[#1C4980] flex items-center gap-1'>1,14 <span className='text-[#05C165] text-xs'>+89</span></h4>
                                         <p className=' text-xs font-medium text-[#1C4980]'>Who Attamped</p>
                                     </div>
                                 </div>
@@ -88,19 +88,19 @@ function OverviewMobile({ show }) {
                                         </svg>
                                     </div>
                                     <div className="flex flex-col">
-                                        <h4 className=' font-semibold text-lg text-[#1C4980] flex items-center gap-1'>11,000 <span className='text-[#05C165] text-xs'>+89</span></h4>
+                                        <h4 className=' font-semibold text-base text-[#1C4980] flex items-center gap-1'>11,000 <span className='text-[#05C165] text-xs'>+89</span></h4>
                                         <p className=' text-xs font-medium text-[#1C4980]'>E-mail</p>
                                     </div>
                                 </div>
                                 <div className="border-x px-3 flex gap-3 items-center">
                                     <div className="flex flex-col">
-                                        <h4 className=' font-semibold text-lg text-[#1C4980] flex items-center gap-1'>145 <span className='text-[#05C165] text-xs'>+89</span></h4>
+                                        <h4 className=' font-semibold text-base text-[#1C4980] flex items-center gap-1'>145 <span className='text-[#05C165] text-xs'>+89</span></h4>
                                         <p className=' text-xs font-medium text-[#1C4980]'>Social Share</p>
                                     </div>
                                 </div>
                                 <div className="border-l pl-3 flex gap-3 items-center">
                                     <div className="flex flex-col">
-                                        <h4 className=' font-semibold text-lg text-[#1C4980] flex items-center gap-1'>145 <span className='text-[#05C165] text-xs'>+89</span></h4>
+                                        <h4 className=' font-semibold text-base text-[#1C4980] flex items-center gap-1'>145 <span className='text-[#05C165] text-xs'>+89</span></h4>
                                         <p className=' text-xs font-medium text-[#1C4980]'>Unique Link</p>
                                     </div>
                                 </div>
