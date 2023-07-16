@@ -30,7 +30,7 @@ function NewAssessmentForm() {
             </div>
             {/* You can open the modal using ID.showModal() method */}
             <dialog id="my_modal_3" className="modal">
-                <form method="dialog" className={"p-0 rounded-lg modal-box max-w-[36.937rem] w-full " + (!modal ? "!translate-y-[60vh]" : "")}>
+                <form method="dialog" className={"p-0 rounded-lg modal-box max-w-[36.937rem] w-full duration-500 " + (!modal ? "!translate-y-[60vh]" : "")}>
                     <button className="btn btn-sm btn-circle btn-ghost hover:bg-[#FBEBEA] hover:text-[#D63500] absolute right-5 top-4" onClick={() => { hide() }}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="currentColor">
                             <path d="M20.3033 22.071L15 16.7677L9.6967 22.071L7.92893 20.3033L13.2322 15L7.92893 9.69668L9.6967 7.92891L15 13.2322L20.3033 7.92891L22.0711 9.69668L16.7678 15L22.0711 20.3033L20.3033 22.071Z" fill="currentColor" />
@@ -127,8 +127,8 @@ function NewAssessmentForm() {
 
                         </div>
                     </div>
-                    <div className='px-[1.88rem] py-4 border-t'>
-                        <button className='btn bg-[#0073E6] text-white hover:bg-[#0066cc] transition-all btn-block h-4 capitalize'>Save</button>
+                    <div className='px-[1.88rem] py-4 border-t md:border-0 md:shadow-[0px -4px 50px 0px rgba(0, 0, 0, 0.09)]'>
+                        <button className='btn bg-[#0073E6] text-white hover:bg-[#0066cc] transition-all btn-block min-h-[2.6rem] h-4 capitalize'>Save</button>
                     </div>
                 </form>
             </dialog>
