@@ -28,8 +28,8 @@ function NewAssessmentForm() {
                             <path d="M20.3033 22.071L15 16.7677L9.6967 22.071L7.92893 20.3033L13.2322 15L7.92893 9.69668L9.6967 7.92891L15 13.2322L20.3033 7.92891L22.0711 9.69668L16.7678 15L22.0711 20.3033L20.3033 22.071Z" fill="currentColor" />
                         </svg>
                     </button>
-                    <h3 className="px-[1.88rem] py-4 font-semibold text-[#1C4980] text-lg border-b">Create new assessment</h3>
-                    <div className='px-[1.88rem] overflow-auto max-h-[60vh] py-4'>
+                    <h3 className="px-4 md:px-[1.88rem] py-4 font-semibold text-[#1C4980] text-lg border-b">Create new assessment</h3>
+                    <div className='px-4 md:px-[1.88rem] overflow-auto max-h-[60vh] py-4'>
                         <div className="flex gap-5 flex-col form-control w-full">
                             <div>
                                 <label className="label pt-0">
@@ -119,7 +119,7 @@ function NewAssessmentForm() {
 
                         </div>
                     </div>
-                    <div className='px-[1.88rem] py-4 border-t md:border-0 md:shadow-[0px -4px 50px 0px rgba(0, 0, 0, 0.09)]'>
+                    <div className='px-4 md:px-[1.88rem] py-4 border-t md:border-0 md:shadow-[0px -4px 50px 0px rgba(0, 0, 0, 0.09)]'>
                         <button className='btn bg-[#0073E6] text-white hover:bg-[#0066cc] transition-all btn-block min-h-[2.6rem] h-4 capitalize'>Save</button>
                     </div>
                 </form>
