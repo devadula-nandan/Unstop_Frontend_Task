@@ -1,18 +1,10 @@
 import React, { useState } from 'react'
 
 function NewAssessmentForm() {
-    const [modal, setModal] = useState(false)
-    const show = () => {
-        document.getElementById("my_modal_3").showModal();
-        setModal(true)
-    }
-    const hide = () => {
-        setModal(false)
-    }
     const [skills, setSkills] = useState(["UI/UX and Design", "No of Question", "Web Development", "MySQL", "Express.js"])
     return (
         <>
-            <div className='w-full border border-dashed group rounded-box bg-[#F6F8FA] p-[1.875rem] sm:p-2 md:p-[1.875rem] flex gap-2 items-center justify-center flex-col hover:bg-[#ebedf0] cursor-pointer' onClick={() => show()}>
+            <div className='w-full border border-dashed group rounded-box bg-[#F6F8FA] p-[1.875rem] sm:p-2 md:p-[1.875rem] flex gap-2 items-center justify-center flex-col hover:bg-[#ebedf0] cursor-pointer' onClick={() => document.getElementById("my_modal_3").showModal()}>
                 <div className='bg-white p-2 lg:p-4 rounded-full'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 41" fill="none" className='lg:w-[40px] lg:h-[41px] w-[29px] h-[30px] group-hover:rotate-90 transition-all'>
                         <g clipPath="url(#clip0_0_553)">
@@ -29,9 +21,9 @@ function NewAssessmentForm() {
                 <p className=' text-xs font-medium text-[#1C4980] text-center'>From here you can add questions of multiple types like MCQs, subjective (text or paragraph)!</p>
             </div>
             {/* You can open the modal using ID.showModal() method */}
-            <dialog id="my_modal_3" className="modal">
-                <form method="dialog" className={"p-0 rounded-lg modal-box max-w-[36.937rem] w-full duration-500 " + (!modal ? "!translate-y-[60vh]" : "")}>
-                    <button className="btn btn-sm btn-circle btn-ghost hover:bg-[#FBEBEA] hover:text-[#D63500] absolute right-5 top-4" onClick={() => { hide() }}>
+            <dialog id="my_modal_3" className="modal modal-bottom sm:modal-middle">
+                <form method="dialog" className={"p-0 rounded-lg modal-box max-w-[36.937rem] w-full duration-500 " }>
+                    <button className="btn btn-sm btn-circle btn-ghost hover:bg-[#FBEBEA] hover:text-[#D63500] absolute right-5 top-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="currentColor">
                             <path d="M20.3033 22.071L15 16.7677L9.6967 22.071L7.92893 20.3033L13.2322 15L7.92893 9.69668L9.6967 7.92891L15 13.2322L20.3033 7.92891L22.0711 9.69668L16.7678 15L22.0711 20.3033L20.3033 22.071Z" fill="currentColor" />
                         </svg>
@@ -132,7 +124,7 @@ function NewAssessmentForm() {
                     </div>
                 </form>
             </dialog>
-            <button className='btn btn-circle fixed right-3 bottom-3 border-none bg-[#0073E6] inline-flex lg:hidden' onClick={() => show()}>
+            <button className='btn btn-circle fixed right-3 bottom-3 border-none bg-[#0073E6] inline-flex lg:hidden' onClick={() => document.getElementById("my_modal_3").showModal()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <path d="M23.3333 16.1905H16.1905V23.3333H13.8095V16.1905H6.66666V13.8095H13.8095V6.66666H16.1905V13.8095H23.3333V16.1905Z" fill="white" />
                 </svg>
