@@ -60,11 +60,11 @@ function AssessmentCard() {
                     </div>
                 </div>
                 <div className="flex flex-wrap gap-y-2 justify-between items-center border-dashed border-t-[1.6px] pt-3">
-                    <div className='flex gap-2 leading-tight text-[#1C4980]'>
+                    <div className='flex gap-1 md:gap-2 leading-tight text-[#1C4980]'>
                         <p className=' font-semibold text-sm'>00<br /><span className=' font-medium text-xs'>Duration</span></p>
                         <p className=' font-semibold text-sm'>00<br /><span className=' font-medium text-xs'>Questions</span></p>
                     </div>
-                    <div className='flex gap-2'>
+                    <div className='flex gap-1 md:gap-2'>
                         <button className='rounded-full flex border items-center gap-1 px-2 border-[#1C4980] font-medium text-[#1C4980] hover:bg-[#E5F1FC] transition-all'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <g clipPath="url(#clip0_0_583)">
