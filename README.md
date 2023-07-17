@@ -1,5 +1,4 @@
-# Getting Started with Create React App
-
+# Unstop Frontend Developer Task
 This is a task given at Unstop, for a Frontend developer role.
 
 Tech used:
