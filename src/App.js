@@ -3,17 +3,17 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 
 // Components
 import Layout from './layout/Layout';
-import NotFound from './components/pages/NotFound';
-import Login from './components/pages/Login';
+import NotFound from './components/pages/not-found/NotFound';
+import Login from './components/pages/login/Login';
 
 
 // Protected Route Components
-import Dashboard from './components/pages/Dashboard';
+import Dashboard from './components/pages/dashboard/Dashboard';
 import Assessment from './components/pages/assessment/Assessment';
-import MyLibrary from './components/pages/MyLibrary';
+import MyLibrary from './components/pages/my-library/MyLibrary';
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // Replace with authentication logic
+  const [isAuthenticated, setIsAuthenticated] = useState(true); // Replace with authentication logic
 
   // Custom Route Guard
   const requireAuth = (component) => {
@@ -21,9 +21,9 @@ const App = () => {
   };
 
   return (
-    
-      <Router>
-        <Layout>
+
+    <Router>
+      <Layout>
         <Routes>
           {/* public Routes */}
           <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
@@ -37,8 +37,8 @@ const App = () => {
           {/* 404 Not Found Route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-    </Layout>
-      </Router>
+      </Layout>
+    </Router>
   );
 };
 

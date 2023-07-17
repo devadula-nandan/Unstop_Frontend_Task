@@ -1,5 +1,4 @@
-import React from 'react'
-
+// this is the overview component in mobile mode
 function OverviewMobile({ show }) {
     return (
         <>
@@ -106,8 +105,6 @@ function OverviewMobile({ show }) {
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>

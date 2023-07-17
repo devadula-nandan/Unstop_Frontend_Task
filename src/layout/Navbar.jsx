@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
+//  This is the Navbar component
 function Navbar() {
+    // we set the active state to the matching path else it would be dashboard
     const navigate = useNavigate()
-    const [active, setActive] = useState("dashboard")
+    const [active, setActive] = useState(window.location.pathname.substr(1) || "dashboard")
+
+    // this function will blur any active element in dom (useful for daisy-ui sidebar closing behaviour) 
     const blurEl = () => {
         const elem = document.activeElement;
         if (elem) {
@@ -11,11 +15,11 @@ function Navbar() {
         }
     }
     return (
-        <div className=''>
+        <div>
+            {/* below div is for mobile containing hamburger button toggle for sidebar */}
             <div className="lg:absolute top-0 drawer drawer-start w-auto px-3 pt-2 md:pt-3 lg:hidden items-center">
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex gap-3 items-center">
-                    {/* Page content here */}
                     <label htmlFor="my-drawer" className="btn btn-ghost bg-[#F2F8FE] btn-circle h-9 w-9 min-h-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                             <g clipPath="url(#clip0_0_956)">
@@ -28,8 +32,10 @@ function Navbar() {
                             </defs>
                         </svg>
                     </label>
-                    <p className='text-slate-700 font-semibold capitalize'>{active}</p>
+                    {/* active title */}
+                    <h1 className='text-slate-700 font-semibold capitalize'>{active}</h1>
                 </div>
+                {/* sidebar slider */}
                 <div className="drawer-side z-10">
                     <label htmlFor="my-drawer" className="drawer-overlay"></label>
                     <ul className="menu gap-2 px-4 py-6 w-full max-w-[280px] h-full bg-[#F2F8FE] text-base-content">
@@ -70,7 +76,7 @@ function Navbar() {
                             </a>
                         </li>
                         <li>
-                            <a onClick={() => { setActive("library"); document.getElementById("my-drawer").checked = false; navigate("/my_library") }} className={"px-2 py-[0.62rem] hover:bg-[#E5F1FC] text-[#1C4980] hover:text-[#0073E6] text-sm font-semibold active:!bg-[#E5F1FC] active:!text-[#1C4980] border border-transparent " + (active == "library" ? "bg-[#E5F1FC] !border-[#0073E6] border !text-[#0073E6]" : "")}>
+                            <a onClick={() => { setActive("my_library"); document.getElementById("my-drawer").checked = false; navigate("/my_library") }} className={"px-2 py-[0.62rem] hover:bg-[#E5F1FC] text-[#1C4980] hover:text-[#0073E6] text-sm font-semibold active:!bg-[#E5F1FC] active:!text-[#1C4980] border border-transparent " + (active == "my_library" ? "bg-[#E5F1FC] !border-[#0073E6] border !text-[#0073E6]" : "")}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="currentColor">
                                     <mask id="mask0_0_877" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
                                         <rect y="0.5" width="20" height="20" />
@@ -100,6 +106,7 @@ function Navbar() {
                     </ul>
                 </div>
             </div>
+            {/* below div only shows in desktop, and is a vertical navbar to the left of the screen sticky to the top */}
             <div className=" min-h-screen h-full pr-2 hidden lg:block">
                 <div className="h-full bg-white">
                     <ul className="menu pl-[1.88rem] pt-4 pr-5 pb-5 gap-2 sticky top-0">
@@ -132,7 +139,7 @@ function Navbar() {
                             </a>
                         </li>
                         <li>
-                            <a onClick={() => { navigate('/my_library'); setActive("library") }} className={"px-2 py-2 hover:bg-[#E5F1FC] text-[#1C4980] hover:text-[#0073E6] active:!bg-[#E5F1FC] active:!text-[#1C4980] flex flex-col border border-transparent " + (active == "library" ? "bg-[#E5F1FC] !border-[#0073E6] border !text-[#0073E6]" : "")}>
+                            <a onClick={() => { navigate('/my_library'); setActive("my_library") }} className={"px-2 py-2 hover:bg-[#E5F1FC] text-[#1C4980] hover:text-[#0073E6] active:!bg-[#E5F1FC] active:!text-[#1C4980] flex flex-col border border-transparent " + (active == "my_library" ? "bg-[#E5F1FC] !border-[#0073E6] border !text-[#0073E6]" : "")}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                                     <mask id="mask0_0_877" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
                                         <rect y="0.5" width="20" height="20" />

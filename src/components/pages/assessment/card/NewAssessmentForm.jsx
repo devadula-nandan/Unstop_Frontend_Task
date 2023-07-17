@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 
+
+// this is the first card from which we can create a new assessment
+// this contains a form as well placed in a modal
+// there is also a floating button to open the modal in mobile screen
 function NewAssessmentForm() {
     const [isOpen, setIsOpen] = useState(false);
     const [skills, setSkills] = useState(["UI/UX and Design", "No of Question", "Web Development", "MySQL", "Express.js"])
@@ -12,6 +16,7 @@ function NewAssessmentForm() {
     };
     return (
         <>
+            {/* the card component containing the modal */}
             <div className='w-full border border-dashed group rounded-box bg-[#F6F8FA] p-[1rem] sm:p-3 md:p-[1.875rem] hover:bg-[#ebedf0] cursor-pointer'>
                 <div className=' flex gap-2 items-center justify-center flex-col ' onClick={() => openModal()}>
                     <div className='bg-white p-2 lg:p-4 rounded-full'>
@@ -30,11 +35,11 @@ function NewAssessmentForm() {
                     <p className=' text-xs font-medium text-[#1C4980] text-center'>From here you can add questions of multiple types like MCQs, subjective (text or paragraph)!</p>
                 </div>
                 <div>
-                    <div
-                        className={"fixed transition-all z-40 duration-500 w-screen h-screen inset-0 bg-gray-900 " + (isOpen ? "visible bg-opacity-60" : "invisible bg-opacity-0")}
-                        onClick={closeModal}
-                    ></div>
-
+                    {/* below div is the modal backdrop */}
+                    <div className={"fixed transition-all z-40 duration-500 w-screen h-screen inset-0 bg-gray-900 " + (isOpen ? "visible bg-opacity-60" : "invisible bg-opacity-0")}
+                        onClick={closeModal}>
+                    </div>
+                    {/* below code is the modal containing the form */}
                     <form method="dialog" className={"p-0 rounded-t-lg transition-all duration-500 md:rounded-lg bg-white w-full fixed z-50 -bottom-[100vh] md:!bottom-auto md:top-[190vh] left-1/2 -translate-x-1/2 max-w-[37rem] md:-translate-y-1/2 " + (isOpen ? "!bottom-0 md:!top-1/2" : "")}>
                         <button onClick={closeModal} className="btn btn-sm min-h-0 h-10 w-10 btn-circle btn-ghost hover:bg-[#FBEBEA] hover:text-[#D63500] bg-[#FBEBEA] text-[#D63500] scale-105 md:bg-transparent md:text-[#1C4980] md:scale-100 absolute md:right-5 md:top-4 right-3 top-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="currentColor">
@@ -63,21 +68,18 @@ function NewAssessmentForm() {
                                         <option value="purpose 5">purpose 5</option>
                                         <option value="none">none</option>
                                     </select>
+                                    {/* <ul className="menu lg:menu-horizontal !bg-white border border-[#DADCE0] w-full rounded-lg p-0 font-medium text-xs  md:text-sm text-[#1C4980]">
+                                        <li className='w-full'>
+                                            <details className='w-full' open>
+                                                <summary className='py-3 pl-4 pr-5 w-full !bg-white active:!text-[#1C4980] hover:!text-[#1C4980]'>Parent item</summary>
+                                                <ul className='!mt-0 w-full border rounded-lg'>
+                                                    <li><a className='hover:bg-[#E5F1FC] hover:text-[#1C4980] active:!bg-[#c1d6e9] active:!text-[#1C4980]'>level 2 item 1</a></li>
+                                                    <li><a className='hover:bg-[#E5F1FC] hover:text-[#1C4980] active:!bg-[#c1d6e9] active:!text-[#1C4980]'>level 2 item 1</a></li>
 
-                                    {/* <input type="hidden" id='purpose' />
-                                <ul className="menu lg:menu-horizontal !bg-white border border-[#DADCE0] w-full rounded-lg p-0 font-medium text-xs  md:text-sm text-[#1C4980]">
-                                    <li className='w-full'>
-                                        <details className='w-full' open>
-                                            <summary className='py-3 pl-4 pr-5 w-full !bg-white active:!text-[#1C4980] hover:!text-[#1C4980]'>Parent item</summary>
-                                            <ul className='!mt-0 w-full border rounded-lg'>
-                                                <li><a className='hover:bg-[#E5F1FC] hover:text-[#1C4980] active:!bg-[#c1d6e9] active:!text-[#1C4980]'>level 2 item 1</a></li>
-                                                <li><a className='hover:bg-[#E5F1FC] hover:text-[#1C4980] active:!bg-[#c1d6e9] active:!text-[#1C4980]'>level 2 item 1</a></li>
-                                                
-                                            </ul>
-                                        </details>
-                                    </li>
-                                </ul> */}
-
+                                                </ul>
+                                            </details>
+                                        </li>
+                                    </ul> */}
                                 </div>
                                 <div>
                                     <label className="label pt-0">
@@ -132,13 +134,14 @@ function NewAssessmentForm() {
 
                             </div>
                         </div>
+                        {/* form submit button */}
                         <div className='px-4 md:px-[1.88rem] py-4 border-t md:border-0 md:shadow-[0_-4px_50px_0_rgba(0,0,0,0.09)]'>
                             <button className='btn bg-[#0073E6] text-white hover:bg-[#0066cc] transition-all btn-block min-h-[2.6rem] h-4 capitalize'>Save</button>
                         </div>
                     </form>
                 </div>
             </div>
-
+            {/* below is the floating button that appears on mobile which opens the modal */}
             <button className='btn btn-circle fixed right-3 bottom-3 border-none bg-[#0073E6] inline-flex lg:hidden' onClick={() => openModal()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <path d="M23.3333 16.1905H16.1905V23.3333H13.8095V16.1905H6.66666V13.8095H13.8095V6.66666H16.1905V13.8095H23.3333V16.1905Z" fill="white" />

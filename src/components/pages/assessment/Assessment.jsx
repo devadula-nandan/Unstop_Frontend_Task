@@ -4,8 +4,10 @@ import NewAssessmentForm from './card/NewAssessmentForm'
 import OverviewDesktop from './overview/OverviewDesktop'
 import OverviewMobile from './overview/OverviewMobile'
 
+// this is the route page component of route /assessment
 function Assessment() {
     const assessments = []
+    // populating assessments array with 5 cards
     for (let i = 0; i < 5; i++) {
         assessments.push({ id: i, title: `Assessment ${i}` })
     }
@@ -20,21 +22,23 @@ function Assessment() {
             <div className="flex gap-3 px-0 lg:px-5 border-b w-max min-w-full">
                 <h1 className='text-xl font-semibold text-[#1C4980] my-auto hidden lg:block'>Assessment</h1>
                 <div className=" h-auto w-[1px] bg-[#DADCE0] my-2 hidden lg:block"></div>
+                {/* tabs */}
                 <div className="tabs w-screen md:w-auto overflow-auto flex-nowrap px-2">
                     <a href='#1' className="tab text-[0.875rem] px-2 md:px-4 whitespace-nowrap h-auto tab-bordered font-semibold py-3 lg:py-5 text-[#0073E6] border-b-2 border-[#0073E6]">My Assessments</a>
                     <a href='#2' className="tab text-[0.875rem] px-2 md:px-4 whitespace-nowrap h-auto tab-bordered font-semibold py-3 lg:py-5 text-[#1C4980] border-transparent">Unstop Assessments</a>
                 </div>
             </div>
             <div className="lg:px-5 lg:pb-5 lg:pt-4 px-3 pb-3 pt-4">
-                {/* expander here */}
+                {/* mobile overview */}
                 <div className='block lg:hidden'>
                     <OverviewMobile show={showMobileOverview} />
                 </div>
+                {/* desktop overview */}
                 <h3 className=' font-medium text-lg text-[#1C4980] mb-4 hidden lg:block'>Assessments Overview</h3>
                 <div className='hidden lg:block'>
                     <OverviewDesktop />
                 </div>
-
+                {/* below div shows only on mobile, containing the title and 3 buttons filter, search and overview */}
                 <div className="flex justify-between lg:hidden">
                     <h3 className=' font-medium text-lg text-[#1C4980] mb-4'>My Assessment</h3>
                     <div className='flex gap-1'>
@@ -69,6 +73,7 @@ function Assessment() {
                         </button>
                     </div>
                 </div>
+                {/* grid for rendering the assessment cards in a responsive manner */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8">
                     <NewAssessmentForm />
                     {assessments.map((item, index) => (

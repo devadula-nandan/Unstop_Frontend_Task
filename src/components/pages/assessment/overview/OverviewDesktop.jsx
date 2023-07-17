@@ -1,5 +1,4 @@
-import React from 'react'
-
+// this is the overview component in desktop mode
 function OverviewDesktop() {
     return (
         <div className=" w-full rounded-box border mb-8 flex-wrap overflow-hidden flex">
@@ -83,7 +82,6 @@ function OverviewDesktop() {
                     </div>
                 </div>
             </div>
-
             <div className="py-4 px-5">
                 <h4 className='text-[#1C4980] text-[0.875rem] font-semibold mb-4'>Total Purpose</h4>
                 <div className="flex gap-3 items-center">

@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 This is a task given at Unstop, for a Frontend developer role.
+Tech used
+Html, Css, React.js, React-router, Tailwind, DaisyUI
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
