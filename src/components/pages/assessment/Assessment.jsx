@@ -20,7 +20,7 @@ function Assessment() {
             <div className="flex gap-3 px-0 lg:px-5 border-b w-max min-w-full">
                 <h1 className='text-xl font-semibold text-[#1C4980] my-auto hidden lg:block'>Assessment</h1>
                 <div className=" h-auto w-[1px] bg-[#DADCE0] my-2 hidden lg:block"></div>
-                <div className="tabs w-screen overflow-auto flex-nowrap px-2">
+                <div className="tabs w-screen md:w-auto overflow-auto flex-nowrap px-2">
                     <a href='#1' className="tab text-[0.875rem] px-2 md:px-4 whitespace-nowrap h-auto tab-bordered font-semibold py-3 lg:py-5 text-[#0073E6] border-b-2 border-[#0073E6]">My Assessments</a>
                     <a href='#2' className="tab text-[0.875rem] px-2 md:px-4 whitespace-nowrap h-auto tab-bordered font-semibold py-3 lg:py-5 text-[#1C4980] border-transparent">Unstop Assessments</a>
                 </div>

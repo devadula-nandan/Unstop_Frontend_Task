@@ -61,11 +61,11 @@ function AssessmentCard() {
                 </div>
                 <div className="flex flex-wrap gap-y-2 justify-between items-center border-dashed border-t-[1.6px] pt-3">
                     <div className='flex gap-1 md:gap-2 leading-tight text-[#1C4980]'>
-                        <p className=' font-semibold text-sm'>00<br /><span className=' font-medium text-xs'>Duration</span></p>
-                        <p className=' font-semibold text-sm'>00<br /><span className=' font-medium text-xs'>Questions</span></p>
+                        <p className=' font-semibold text-sm'>00<br /><span className=' font-medium text-[0.625rem] md:text-xs'>Duration</span></p>
+                        <p className=' font-semibold text-sm'>00<br /><span className=' font-medium text-[0.625rem] md:text-xs'>Questions</span></p>
                     </div>
                     <div className='flex gap-1 md:gap-2'>
-                        <button className='rounded-full flex border items-center gap-1 px-2 border-[#1C4980] font-medium text-[#1C4980] hover:bg-[#E5F1FC] transition-all'>
+                        <button className='rounded-full flex border items-center text-xs md:text-[0.875rem] gap-1 px-2 border-[#1C4980] font-medium text-[#1C4980] hover:bg-[#E5F1FC] transition-all'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <g clipPath="url(#clip0_0_583)">
                                     <path d="M10.0003 4.10614L7.64331 6.46316L8.82182 7.64168L11.1788 5.28465C12.1511 4.31238 13.7421 4.31238 14.7144 5.28465C15.6867 6.25692 15.6867 7.84792 14.7144 8.82019L12.3574 11.1772L13.5359 12.3557L15.8929 9.9987C17.5192 8.37235 17.5192 5.73249 15.8929 4.10614C14.2665 2.4798 11.6267 2.4798 10.0003 4.10614ZM11.1788 12.3557L8.82182 14.7127C7.84955 15.685 6.25856 15.685 5.28629 14.7127C4.31402 13.7405 4.31402 12.1495 5.28629 11.1772L7.64331 8.82019L6.4648 7.64168L4.10778 9.9987C2.48143 11.625 2.48143 14.2649 4.10778 15.8913C5.73412 17.5176 8.37399 17.5176 10.0003 15.8913L12.3574 13.5342L11.1788 12.3557ZM7.05406 11.7665L11.7681 7.05242L12.9466 8.23093L8.23257 12.945L7.05406 11.7665Z" fill="#1C4980" />
