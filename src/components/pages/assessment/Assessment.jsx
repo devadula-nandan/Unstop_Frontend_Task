@@ -17,12 +17,12 @@ function Assessment() {
     })
     return (
         <div className='bg-base-100 rounded-box'>
-            <div className="flex gap-3 px-0 lg:px-5 border-b">
+            <div className="flex gap-3 px-0 lg:px-5 border-b w-max min-w-full">
                 <h1 className='text-xl font-semibold text-[#1C4980] my-auto hidden lg:block'>Assessment</h1>
                 <div className=" h-auto w-[1px] bg-[#DADCE0] my-2 hidden lg:block"></div>
-                <div className="tabs">
-                    <a className="tab text-[0.875rem] h-auto tab-bordered font-semibold py-3 lg:py-5 text-[#0073E6] border-b-2 border-[#0073E6]">My Assessments</a>
-                    <a className="tab text-[0.875rem] h-auto tab-bordered font-semibold py-3 lg:py-5 text-[#1C4980] border-transparent">Unstop Assessments</a>
+                <div className="tabs w-screen overflow-auto flex-nowrap">
+                    <a href='#1' className="tab text-[0.875rem] whitespace-nowrap h-auto tab-bordered font-semibold py-3 lg:py-5 text-[#0073E6] border-b-2 border-[#0073E6]">My Assessments</a>
+                    <a href='#2' className="tab text-[0.875rem] whitespace-nowrap h-auto tab-bordered font-semibold py-3 lg:py-5 text-[#1C4980] border-transparent">Unstop Assessments</a>
                 </div>
             </div>
             <div className="lg:px-5 lg:pb-5 lg:pt-4 px-3 pb-3 pt-4">
